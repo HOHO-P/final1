@@ -1,0 +1,99 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif TC', serif;
+  overflow-y: scroll;
+  background: none; /* 移除任何可能的背景干擾 */
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* 確保 canvas 在文字下方 */
+}
+
+video {
+  display: none; /* 確保影片元素隱藏 */
+}
+
+h1 {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  z-index: 10;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+ul {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+  position: relative;
+}
+
+ul li {
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.spacer {
+  height: 800px;
+}
+
+/* 作品集區塊標題 */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* 下拉選單 */
+.week-select {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+select {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+h1, ul, .content {
+  z-index: 10; /* 確保文字內容在畫布之上 */
+  position: relative; /* 必須設定 position 才能生效 z-index */
+}
+
+
